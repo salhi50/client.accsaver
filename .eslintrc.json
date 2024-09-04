@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "root": true,
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": false
+  },
+  "extends": ["airbnb", "airbnb/hooks", "next/core-web-vitals", "prettier"],
+  "rules": {
+    "react/require-default-props": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "@next/next/no-img-element": "off",
+    "no-alert": "off",
+    "no-restricted-globals": "off",
+    "func-names": "off",
+    "prefer-const": "off",
+    "one-var": "off",
+    "consistent-return": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/order": "off",
+    "react/jsx-no-bind": "off",
+    "import/prefer-default-export": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}"],
+      "extends": ["airbnb-typescript", "prettier"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-shadow": "off"
+      },
+      "parserOptions": {
+        "project": "tsconfig.json"
+      }
+    }
+  ]
+}

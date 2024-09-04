@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-weight: theme(fontWeight.normal);
+    color: theme(textColor.body);
+    font-size: theme(fontSize.body-base);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: theme(fontWeight.semibold);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .link {
+    @apply hover:underline;
+  }
+
+  .link-primary {
+    @apply text-primary hover:text-primary-dark;
+  }
+
+  .link-white {
+    @apply text-white text-opacity-75 hover:text-opacity-100;
+  }
+
+  .input-field {
+    @apply py-1.5 px-3 border shadow-inset rounded block w-full focus:outline-0 focus:border-primary;
+  }
+}

@@ -1,0 +1,46 @@
+body {
+  @apply bg-primary-dark text-white py-16;
+}
+
+.heading {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.login-btn,
+.register-btn {
+  @apply border w-full mb-4 rounded text-xl py-4 px-8 text-center font-medium;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 2px 4px;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  filter: brightness(90%);
+}
+
+.login-btn {
+  @apply border-white;
+}
+
+.register-btn {
+  @apply border-transparent bg-white text-primary-dark;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 3.5rem;
+    line-height: 1.25;
+    max-width: 70%;
+  }
+
+  .login-btn {
+    @apply mr-4;
+  }
+
+  .login-btn,
+  .register-btn {
+    @apply w-auto text-start;
+  }
+}
